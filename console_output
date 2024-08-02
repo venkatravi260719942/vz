@@ -1,810 +1,244 @@
-10:43:48 Ansible Plus Playbook Engine Starts Invoking - From 143-251-65-136.vpc.verizon.com using ansible version 2.15
-10:43:48 ============= Accessing CyberArk For Credentials =============
-10:43:48 ============= Generating Dynamic Inventory =============
-10:43:48 
-10:43:48 PLAY [localhost] ***************************************************************
-
-10:43:48 
-
-10:43:48 TASK [fail if stash repo is not private] ***************************************
-
-10:43:48 skipping: [localhost]
-
-10:43:48 
-
-10:43:48 TASK [synching git repo with AuditID and with Branch name] *********************
-
-10:44:06 changed: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Check the repo size] *****************************************************
-
-10:44:06 changed: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [debug] *******************************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [uri] *********************************************************************
-
-10:44:06 ok: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Removing Temporary GIT Directory] ****************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [uri] *********************************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [mail] ********************************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [debug] *******************************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [fail] ********************************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 PLAY RECAP *********************************************************************
-
-10:44:06 localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=7    rescued=0    ignored=0   
-
-10:44:06 localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=7    rescued=0    ignored=0   
-
-10:44:06 
-
-10:44:06 
-10:44:06 PLAY [localhost] ***************************************************************
-
-10:44:06 
-
-10:44:06 TASK [Prepare : debug] *********************************************************
-
-10:44:06 ok: [localhost] => {
-
-10:44:06     "NestedBucket": "vz-app-itcs-h9vv-prod-common-cft-s3bucket"
-
-10:44:06 }
-
-10:44:06 
-
-10:44:06 TASK [Prepare : debug] *********************************************************
-
-10:44:06 ok: [localhost] => {
-
-10:44:06     "lookup('env','HOSTNAME')": "143-251-65-136.vpc.verizon.com"
-
-10:44:06 }
-
-10:44:06 
-
-10:44:06 TASK [Prepare : fail] **********************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : set_fact] ******************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : set_fact] ******************************************************
-
-10:44:06 ok: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : fail if stash repo is not configure to private] ****************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : validating User AWS VPC based on the Portfolio] ****************
-
-10:44:06 changed: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : debug] *********************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : fail] **********************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : validating User access for application based AWS ADOM group] ***
-
-10:44:06 changed: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : fail] **********************************************************
-
-10:44:06 skipping: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : Creating Temporary GIT Directory] ******************************
-
-10:44:06 changed: [localhost]
-
-10:44:06 
-
-10:44:06 TASK [Prepare : Fetching Users CloudFormation Template] ************************
-
-10:44:17 changed: [localhost]
-
-10:44:17 
-
-10:44:17 TASK [Prepare : include_tasks] *************************************************
-
-10:44:17 included: /apps/opt/local/temp/AnsibleRepo/33941679/CloudFormationCICD_v3_2.11/repo_size_validator.yml for localhost
-
-10:44:17 
-
-10:44:17 TASK [Prepare : Delete .git folder] ********************************************
-
-10:44:17 changed: [localhost]
-
-10:44:17 
-
-10:44:17 TASK [Prepare : Check the repo size] *******************************************
-
-10:44:17 changed: [localhost]
-
-10:44:17 
-
-10:44:17 TASK [Prepare : debug] *********************************************************
-
-10:44:17 ok: [localhost] => {
-
-10:44:17     "users_repo_stats": {
-
-10:44:17         "gitRepo": "git@gitlab.verizon.com:jrdv/devops.git",
-
-10:44:17         "repoBranch": "main",
-
-10:44:17         "repoSizeOnDisk": "16M"
-
-10:44:17     }
-
-10:44:17 }
-
-10:44:17 
-
-10:44:17 TASK [Prepare : uri] ***********************************************************
-
-10:44:17 ok: [localhost]
-
-10:44:17 
-
-10:44:17 TASK [Prepare : Removing Temporary GIT Directory] ******************************
-
-10:44:17 skipping: [localhost]
-
-10:44:17 
-
-10:44:17 TASK [Prepare : uri] ***********************************************************
-
-10:44:17 skipping: [localhost]
-
-10:44:17 
-
-10:44:17 TASK [Prepare : mail] **********************************************************
-
-10:44:17 skipping: [localhost]
-
-10:44:17 
-
-10:44:17 TASK [Prepare : debug] *********************************************************
-
-10:44:17 skipping: [localhost]
-
-10:44:17 
-
-10:44:17 TASK [Prepare : fail] **********************************************************
-
-10:44:19 skipping: [localhost]
-
-10:44:19 
-
-10:44:19 TASK [Assume role for portfolio] ***********************************************
-
-10:44:19 
-
-10:44:19 TASK [sts-assume-role : get AWS Key] *******************************************
-
-10:44:21 ok: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [sts-assume-role : Setting Up AWS Keys] ***********************************
-
-10:44:21 ok: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [Prepare : Setting Up Variables - Output Path] ****************************
-
-10:44:21 ok: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [Prepare : Validate nested cloudformation template] ***********************
-
-10:44:21 changed: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [Prepare : set nestedresult] **********************************************
-
-10:44:21 ok: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [Prepare : fail] **********************************************************
-
-10:44:21 skipping: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [Prepare : set template parameters] ***************************************
-
-10:44:21 skipping: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [Prepare : Run CFN-NAG validation on the Child Templates when nested for s3 resource type] ***
-
-10:44:21 skipping: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [Prepare : fail] **********************************************************
-
-10:44:21 skipping: [localhost]
-
-10:44:21 
-
-10:44:21 TASK [Prepare : Run CFN-NAG validation on the main Template for s3 resource type] ***
-
-10:44:32 changed: [localhost]
-
-10:44:32 
-
-10:44:32 TASK [Prepare : fail] **********************************************************
-
-10:44:32 skipping: [localhost]
-
-10:44:32 
-
-10:44:32 TASK [Prepare : Get AWS Account Name] ******************************************
-
-10:44:37 changed: [localhost]
-
-10:44:37 
-
-10:44:37 TASK [Prepare : set_fact] ******************************************************
-
-10:44:37 ok: [localhost]
-
-10:44:37 
-
-10:44:37 TASK [Prepare : debug] *********************************************************
-
-10:44:37 ok: [localhost] => {
-
-10:44:37     "AwsAccountName": "nts-ple"
-
-10:44:37 }
-
-10:44:37 
-
-10:44:37 TASK [Prepare : Run Cloud Rule Engine] *****************************************
-
-10:44:42 changed: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [Prepare : set_fact] ******************************************************
-
-10:44:42 ok: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [Prepare : Display Rule Engine Violations] ********************************
-
-10:44:42 ok: [localhost] => {}
-
-10:44:42 
-
-10:44:42 MSG:
-
-10:44:42 
-
-10:44:42 ['{"status": "SUCCESS", "rules": {}, "reason": "Rule Engine Validation SUCCESS"}']
-
-10:44:42 
-
-10:44:42 
-
-10:44:42 TASK [Prepare : fail] **********************************************************
-
-10:44:42 skipping: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [NestedS3 : Setting Up Variables - Nested S3] *****************************
-
-10:44:42 skipping: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [NestedS3 : assigning temp params] ****************************************
-
-10:44:42 skipping: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [NestedS3 : Copy nested templates] ****************************************
-
-10:44:42 skipping: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [NestedS3 : Uploading Nested templates to S3] *****************************
-
-10:44:42 skipping: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [LaunchCF : Get CFStack Facts] ********************************************
-
-10:44:42 ok: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [LaunchCF : set_fact] *****************************************************
-
-10:44:42 ok: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [LaunchCF : fail] *********************************************************
-
-10:44:42 skipping: [localhost]
-
-10:44:42 
-
-10:44:42 TASK [LaunchCF : Launch Cloudformation Stack] **********************************
-
-10:48:35 fatal: [localhost]: FAILED! => {
-
-10:48:35     "changed": true,
-
-10:48:35     "events": [
-
-10:48:35         "StackEvent AWS::CloudFormation::Stack VZ-NTS-JRDV-SQDB-PLE-BLUE-GREEN-STK20240801-0028 CREATE_FAILED",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR2 CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR1 CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR1 CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR4 CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR2 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR2 CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR1 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR3 CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR4 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR2 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR1 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR3 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR2 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR1 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR2 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR4 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR3 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR1 CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTPS443L CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTP80L CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTPS443L CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTP80L CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTPS443L CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTP80L CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::LoadBalancer ALB CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::AutoScaling::LaunchConfiguration GREENLC CREATE_FAILED",
-
-10:48:35         "StackEvent AWS::AutoScaling::LaunchConfiguration BLUELC CREATE_FAILED",
-
-10:48:35         "StackEvent AWS::SNS::Topic SNST CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTPS443TG CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTP80TG CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTPS443TG CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTP80TG CREATE_COMPLETE",
-
-10:48:35         "StackEvent AWS::SNS::Topic SNST CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::SNS::Topic SNST CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::LoadBalancer ALB CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTPS443TG CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTP80TG CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTP80TG CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTPS443TG CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::AutoScaling::LaunchConfiguration BLUELC CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTP80TG CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::LoadBalancer ALB CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTPS443TG CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::AutoScaling::LaunchConfiguration GREENLC CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTPS443TG CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::SNS::Topic SNST CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTP80TG CREATE_IN_PROGRESS",
-
-10:48:35         "StackEvent AWS::CloudFormation::Stack VZ-NTS-JRDV-SQDB-PLE-BLUE-GREEN-STK20240801-0028 CREATE_IN_PROGRESS"
-
-10:48:35     ],
-
-10:48:35     "log": [
-
-10:48:35         "AWS::CloudFormation::Stack VZ-NTS-JRDV-SQDB-PLE-BLUE-GREEN-STK20240801-0028 CREATE_FAILED: The following resource(s) failed to create: [BLUELC, GREENLC]. ",
-
-10:48:35         "AWS::AutoScaling::LaunchConfiguration GREENLC CREATE_FAILED: Invalid IamInstanceProfile: VzPol-instance-ple-nts-ple-JRDV-JRDVec2role (Service: AutoScaling, Status Code: 400, Request ID: 5fecdb2c-cc72-40a0-ae0e-2c6c5302f860)",
-
-10:48:35         "AWS::AutoScaling::LaunchConfiguration BLUELC CREATE_FAILED: Invalid IamInstanceProfile: VzPol-instance-ple-nts-ple-JRDV-JRDVec2role (Service: AutoScaling, Status Code: 400, Request ID: 53ac508d-dc2e-4239-8b27-f2da2c103c44)"
-
-10:48:35     ],
-
-10:48:35     "output": "Stack CREATE failed",
-
-10:48:35     "stack_outputs": {},
-
-10:48:35     "stack_resources": [
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:25.610000+00:00",
-
-10:48:35             "logical_resource_id": "ALB",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:loadbalancer/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:27.574000+00:00",
-
-10:48:35             "logical_resource_id": "ALBHTTP80L",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::Listener",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:29.892000+00:00",
-
-10:48:35             "logical_resource_id": "ALBHTTP80LR1",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c/2873c8930297e844",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:29.789000+00:00",
-
-10:48:35             "logical_resource_id": "ALBHTTP80LR2",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c/e2f422712c9bfd1e",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:29.651000+00:00",
-
-10:48:35             "logical_resource_id": "ALBHTTP80LR3",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c/3514b6b2b069bec8",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:29.852000+00:00",
-
-10:48:35             "logical_resource_id": "ALBHTTP80LR4",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c/0a75acfc2568f991",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:27.814000+00:00",
-
-10:48:35             "logical_resource_id": "ALBHTTPS443L",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/87a164d1203fd1e6",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::Listener",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:30.040000+00:00",
-
-10:48:35             "logical_resource_id": "ALBHTTPS443LR1",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/87a164d1203fd1e6/6e8a57465e8e4d7a",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:30.170000+00:00",
-
-10:48:35             "logical_resource_id": "ALBHTTPS443LR2",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/87a164d1203fd1e6/71c8384b2c477155",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:45:05.162000+00:00",
-
-10:48:35             "logical_resource_id": "BLUEALBHTTP80TG",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:targetgroup/JRDV-PLE-20240801-0028-TG80B/8460a8dc8b14de61",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::TargetGroup",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:45:05.176000+00:00",
-
-10:48:35             "logical_resource_id": "BLUEALBHTTPS443TG",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:targetgroup/JRDV-PLE-20240801-0028-TG443B/05d6cb3015e82cf6",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::TargetGroup",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:03.971000+00:00",
-
-10:48:35             "logical_resource_id": "BLUELC",
-
-10:48:35             "physical_resource_id": "",
-
-10:48:35             "resource_type": "AWS::AutoScaling::LaunchConfiguration",
-
-10:48:35             "status": "CREATE_FAILED",
-
-10:48:35             "status_reason": "Invalid IamInstanceProfile: VzPol-instance-ple-nts-ple-JRDV-JRDVec2role (Service: AutoScaling, Status Code: 400, Request ID: 53ac508d-dc2e-4239-8b27-f2da2c103c44)"
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:45:05.116000+00:00",
-
-10:48:35             "logical_resource_id": "GREENALBHTTP80TG",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:targetgroup/JRDV-PLE-20240801-0028-TG80G/93d60d3c3f7be864",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::TargetGroup",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:45:05.148000+00:00",
-
-10:48:35             "logical_resource_id": "GREENALBHTTPS443TG",
-
-10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:targetgroup/JRDV-PLE-20240801-0028-TG443G/4a0c88431f86e87a",
-
-10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::TargetGroup",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:47:16.821000+00:00",
-
-10:48:35             "logical_resource_id": "GREENLC",
-
-10:48:35             "physical_resource_id": "",
-
-10:48:35             "resource_type": "AWS::AutoScaling::LaunchConfiguration",
-
-10:48:35             "status": "CREATE_FAILED",
-
-10:48:35             "status_reason": "Invalid IamInstanceProfile: VzPol-instance-ple-nts-ple-JRDV-JRDVec2role (Service: AutoScaling, Status Code: 400, Request ID: 5fecdb2c-cc72-40a0-ae0e-2c6c5302f860)"
-
-10:48:35         },
-
-10:48:35         {
-
-10:48:35             "last_updated_time": "2024-08-01T14:45:26.034000+00:00",
-
-10:48:35             "logical_resource_id": "SNST",
-
-10:48:35             "physical_resource_id": "arn:aws:sns:us-east-1:443190586461:VZ-NTS-JRDV-SQDB-PLE-BLUE-GREEN-STK20240801-0028-SNST-82h3a53BRfpm",
-
-10:48:35             "resource_type": "AWS::SNS::Topic",
-
-10:48:35             "status": "CREATE_COMPLETE",
-
-10:48:35             "status_reason": null
-
-10:48:35         }
-
-10:48:35     ]
-
-10:48:35 }
-
-10:48:35 
-
-10:48:35 PLAY RECAP *********************************************************************
-
-10:48:35 localhost                  : ok=26   changed=10   unreachable=0    failed=1    skipped=22   rescued=0    ignored=0   
-
-10:48:35 localhost                  : ok=26   changed=10   unreachable=0    failed=1    skipped=22   rescued=0    ignored=0   
-
-10:48:35 
-
-10:48:35 
-10:48:35 
-10:48:35 ****************** VZCloudAIO:1.2 AWSCloudFormation:CreateOrUpdate End ******************
-10:48:35 
-10:48:35 ERROR: AWSCloudFormation:CreateOrUpdate Failed
-10:48:35 Archiving artifacts
-10:48:35 Hygieia: Failed Publishing Build Complete Data. Response Code: 400. 
-10:48:35 Notifying upstream projects of job completion
-10:48:40 Finished: FAILURE
+org.apache.maven.lifecycle.internal.DefaultExecutionEventCatapult.fire(DefaultExecutionEventCatapult.java:70)
+	at org.apache.maven.lifecycle.internal.builder.BuilderCommon.handleBuildError(BuilderCommon.java:144)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:260)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:172)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:100)
+	at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:138)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:179)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at hudson.maven.Maven3Builder.call(Maven3Builder.java:140)
+	at hudson.maven.Maven3Builder.call(Maven3Builder.java:71)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:377)
+	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:78)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[WARNING] Attempt to (de-)serialize anonymous class org.jfrog.hudson.maven2.MavenDependenciesRecorder$1; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
+Notifying upstream projects of job completion
+Join notifier requires a CauseAction
+java.nio.file.NoSuchFileException: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/pom.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:371)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:422)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:156)
+	at hudson.Util.getDigestOf(Util.java:684)
+	at hudson.maven.reporters.MavenArtifactArchiver.postBuild(MavenArtifactArchiver.java:99)
+	at hudson.maven.Maven3Builder$MavenExecutionListener.sessionEnded(Maven3Builder.java:464)
+	at hudson.maven.Maven3Builder$JenkinsEventSpy.onEvent(Maven3Builder.java:281)
+	at org.apache.maven.eventspy.internal.EventSpyDispatcher.onEvent(EventSpyDispatcher.java:86)
+	at org.apache.maven.eventspy.internal.EventSpyExecutionListener.sessionEnded(EventSpyExecutionListener.java:54)
+	at org.apache.maven.lifecycle.internal.DefaultExecutionEventCatapult.fire(DefaultExecutionEventCatapult.java:57)
+	at org.apache.maven.lifecycle.internal.DefaultExecutionEventCatapult.fire(DefaultExecutionEventCatapult.java:38)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:123)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:260)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:172)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:100)
+	at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:138)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:179)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at hudson.maven.Maven3Builder.call(Maven3Builder.java:140)
+	at hudson.maven.Maven3Builder.call(Maven3Builder.java:71)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:377)
+	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:78)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:13 h
+[INFO] Finished at: 2024-07-31T20:15:13-04:00
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-jar-plugin:3.3.0:jar (default-jar) on project verizonframework: Error assembling JAR: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/pom.xml isn't a file. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+An attempt to send an e-mail to empty list of recipients, ignored.
+channel stopped
+[NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API] $ /usr/tmp/nts2/tools/hudson.plugins.sonar.SonarRunnerInstallation/Onesonarcloud-Scanner/bin/sonar-scanner -Dsonar.host.url=https://onesonarcloud.verizon.com ******** -Dsonar.projectKey=CUSTOMER-ACTIVATION -Dsonar.projectName=NTS-TCEV.CUSTOMER-ACTIVATION -Dsonar.sourceEncoding=UTF-8 -Dsonar.userHome=/usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/sonar_cache -Dsonar.projectBaseDir=/usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API -Dsonar.projectVersion=337 -Dsonar.sources=src -Dsonar.buildbreaker.skip=false
+INFO: Scanner configuration file: /var/tmp/nts2/tools/hudson.plugins.sonar.SonarRunnerInstallation/Onesonarcloud-Scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarScanner 4.7.0.2747
+INFO: Java 11.0.19 Red Hat, Inc. (64-bit)
+INFO: Linux 4.18.0-553.5.1.el8_10.x86_64 amd64
+INFO: User cache: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/sonar_cache/cache
+INFO: Scanner configuration file: /var/tmp/nts2/tools/hudson.plugins.sonar.SonarRunnerInstallation/Onesonarcloud-Scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: Analyzing on SonarCloud
+INFO: Default locale: "en_US", source code encoding: "UTF-8"
+INFO: Load global settings
+INFO: Load global settings (done) | time=171ms
+INFO: Server id: E5B4BDAF-AXMqH8ooQ9pWqCaUna0x
+INFO: User cache: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/sonar_cache/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=45ms
+INFO: Load/download plugins (done) | time=3837ms
+INFO: Loaded core extensions: developer-scanner
+INFO: Process project properties
+INFO: Process project properties (done) | time=7ms
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=0ms
+INFO: Project key: CUSTOMER-ACTIVATION
+INFO: Base dir: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API
+INFO: Working dir: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork
+INFO: Load project settings for component key: 'CUSTOMER-ACTIVATION'
+INFO: Load project settings for component key: 'CUSTOMER-ACTIVATION' (done) | time=44ms
+INFO: Load project branches
+INFO: Load project branches (done) | time=29ms
+INFO: Load branch configuration
+INFO: Load branch configuration (done) | time=1ms
+INFO: Auto-configuring with CI 'Jenkins'
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=89ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=2060ms
+INFO: Load analysis cache
+INFO: Load analysis cache (404) | time=24ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=30ms
+WARN: Property 'sonar.bpmn.file.suffixes' is not declared as multi-values/property set but was read using 'getStringArray' method. The SonarQube plugin declaring this property should be updated.
+INFO: Indexing files...
+INFO: Project configuration:
+INFO: 0 files indexed
+INFO: 0 files ignored because of scm ignore settings
+INFO: ------------- Run sensors on module NTS-TCEV.CUSTOMER-ACTIVATION
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=29ms
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+INFO: Sensor C# Analysis Log [csharp]
+INFO: Sensor C# Analysis Log [csharp] (done) | time=8ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=0ms
+INFO: Sensor TextAndSecretsSensor [text]
+INFO: Sensor TextAndSecretsSensor [text] (done) | time=5ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=0ms
+INFO: Sensor VB.NET Analysis Log [vbnet]
+INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=8ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=0ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+INFO: Sensor CSS Rules [javascript]
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [javascript] (done) | time=0ms
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend]
+INFO: javasecurity:S5131 is not activated in quality profile: skipping execution of thymeleaf sensor.
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend] (done) | time=0ms
+INFO: Sensor IaC Docker Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC Docker Sensor [iac] (done) | time=37ms
+INFO: Sensor Serverless configuration file sensor [security]
+INFO: 0 Serverless function entries were found in the project
+INFO: 0 Serverless function handlers were kept as entrypoints
+INFO: Sensor Serverless configuration file sensor [security] (done) | time=3ms
+INFO: Sensor AWS SAM template file sensor [security]
+INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
+INFO: Sensor AWS SAM Inline template file sensor [security]
+INFO: Sensor AWS SAM Inline template file sensor [security] (done) | time=0ms
+INFO: Sensor javabugs [dbd]
+INFO: Reading IR files from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ir/java
+INFO: No IR files have been included for analysis.
+INFO: Sensor javabugs [dbd] (done) | time=0ms
+INFO: Sensor pythonbugs [dbd]
+INFO: Reading IR files from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ir/python
+INFO: No IR files have been included for analysis.
+INFO: Sensor pythonbugs [dbd] (done) | time=1ms
+INFO: Sensor JavaSecuritySensor [security]
+INFO: No taint analysis rules have been enabled, will not execute taint analysis.
+INFO: Sensor JavaSecuritySensor [security] (done) | time=1ms
+INFO: Sensor CSharpSecuritySensor [security]
+INFO: Reading type hierarchy from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/ucfg_cs2
+INFO: Read 0 type definitions
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor CSharpSecuritySensor [security] (done) | time=2ms
+INFO: Sensor PhpSecuritySensor [security]
+INFO: Reading type hierarchy from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ucfg2/php
+INFO: Read 0 type definitions
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor PhpSecuritySensor [security] (done) | time=0ms
+INFO: Sensor PythonSecuritySensor [security]
+INFO: Reading type hierarchy from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ucfg2/python
+INFO: Read 0 type definitions
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor PythonSecuritySensor [security] (done) | time=0ms
+INFO: Sensor JsSecuritySensor [security]
+INFO: Reading type hierarchy from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ucfg2/js
+INFO: Read 0 type definitions
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor JsSecuritySensor [security] (done) | time=0ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Analysis Warnings import [csharp]
+INFO: Sensor Analysis Warnings import [csharp] (done) | time=0ms
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=0ms
+INFO: CPD Executor Calculating CPD for 0 files
+INFO: CPD Executor CPD calculation finished (done) | time=0ms
+INFO: Load New Code definition
+INFO: Load New Code definition (done) | time=26ms
+INFO: Analysis report generated in 73ms, dir size=198.3 kB
+INFO: Analysis report compressed in 9ms, zip size=27.2 kB
+INFO: Analysis report uploaded in 51ms
+INFO: ANALYSIS SUCCESSFUL, you can find the results at: https://onesonarcloud.verizon.com/dashboard?id=CUSTOMER-ACTIVATION
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://onesonarcloud.verizon.com/api/ce/task?id=AZELSpzp88wVuR9XyLDj
+INFO: Analysis total time: 4.996 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 11.017s
+INFO: Final Memory: 39M/256M
+INFO: ------------------------------------------------------------------------
+New run name is '#337'
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at PROJECT level /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/ExtentReport to /apps/opt/jn-nts2-vd/jnhome/jobs/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/jobs/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/htmlreports/Custom_5fReport
+[htmlpublisher] Archiving at PROJECT level /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/ExtentReport to /apps/opt/jn-nts2-vd/jnhome/jobs/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/jobs/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/htmlreports/FailureDetails_5fReport
+[htmlpublisher] Archiving at PROJECT level /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/ExtentReport to /apps/opt/jn-nts2-vd/jnhome/jobs/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/jobs/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/htmlreports/Summary_5fReport
+[PostBuildScript] - [INFO] Executing post build scripts.
+Notifying upstream projects of job completion
+An attempt to send an e-mail to empty list of recipients, ignored.
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: imran.rangrez@verizon.com raju.mariappan@verizon.com maheshkumar.maheshwaram@verizon.com priyanka.sakthiganesh@verizon.com cheramahadevi.senthilvelan@verizon.com sathish.varukolu@verizon.com abinaya.thangaraj@verizon.com surya.murthi.sm@verizon.com ien-ntls-eline-activation-team@verizon.com
+Finished: FAILURE
