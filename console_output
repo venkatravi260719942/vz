@@ -1,0 +1,810 @@
+10:43:48 Ansible Plus Playbook Engine Starts Invoking - From 143-251-65-136.vpc.verizon.com using ansible version 2.15
+10:43:48 ============= Accessing CyberArk For Credentials =============
+10:43:48 ============= Generating Dynamic Inventory =============
+10:43:48 
+10:43:48 PLAY [localhost] ***************************************************************
+
+10:43:48 
+
+10:43:48 TASK [fail if stash repo is not private] ***************************************
+
+10:43:48 skipping: [localhost]
+
+10:43:48 
+
+10:43:48 TASK [synching git repo with AuditID and with Branch name] *********************
+
+10:44:06 changed: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Check the repo size] *****************************************************
+
+10:44:06 changed: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [debug] *******************************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [uri] *********************************************************************
+
+10:44:06 ok: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Removing Temporary GIT Directory] ****************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [uri] *********************************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [mail] ********************************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [debug] *******************************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [fail] ********************************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 PLAY RECAP *********************************************************************
+
+10:44:06 localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=7    rescued=0    ignored=0   
+
+10:44:06 localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=7    rescued=0    ignored=0   
+
+10:44:06 
+
+10:44:06 
+10:44:06 PLAY [localhost] ***************************************************************
+
+10:44:06 
+
+10:44:06 TASK [Prepare : debug] *********************************************************
+
+10:44:06 ok: [localhost] => {
+
+10:44:06     "NestedBucket": "vz-app-itcs-h9vv-prod-common-cft-s3bucket"
+
+10:44:06 }
+
+10:44:06 
+
+10:44:06 TASK [Prepare : debug] *********************************************************
+
+10:44:06 ok: [localhost] => {
+
+10:44:06     "lookup('env','HOSTNAME')": "143-251-65-136.vpc.verizon.com"
+
+10:44:06 }
+
+10:44:06 
+
+10:44:06 TASK [Prepare : fail] **********************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : set_fact] ******************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : set_fact] ******************************************************
+
+10:44:06 ok: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : fail if stash repo is not configure to private] ****************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : validating User AWS VPC based on the Portfolio] ****************
+
+10:44:06 changed: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : debug] *********************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : fail] **********************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : validating User access for application based AWS ADOM group] ***
+
+10:44:06 changed: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : fail] **********************************************************
+
+10:44:06 skipping: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : Creating Temporary GIT Directory] ******************************
+
+10:44:06 changed: [localhost]
+
+10:44:06 
+
+10:44:06 TASK [Prepare : Fetching Users CloudFormation Template] ************************
+
+10:44:17 changed: [localhost]
+
+10:44:17 
+
+10:44:17 TASK [Prepare : include_tasks] *************************************************
+
+10:44:17 included: /apps/opt/local/temp/AnsibleRepo/33941679/CloudFormationCICD_v3_2.11/repo_size_validator.yml for localhost
+
+10:44:17 
+
+10:44:17 TASK [Prepare : Delete .git folder] ********************************************
+
+10:44:17 changed: [localhost]
+
+10:44:17 
+
+10:44:17 TASK [Prepare : Check the repo size] *******************************************
+
+10:44:17 changed: [localhost]
+
+10:44:17 
+
+10:44:17 TASK [Prepare : debug] *********************************************************
+
+10:44:17 ok: [localhost] => {
+
+10:44:17     "users_repo_stats": {
+
+10:44:17         "gitRepo": "git@gitlab.verizon.com:jrdv/devops.git",
+
+10:44:17         "repoBranch": "main",
+
+10:44:17         "repoSizeOnDisk": "16M"
+
+10:44:17     }
+
+10:44:17 }
+
+10:44:17 
+
+10:44:17 TASK [Prepare : uri] ***********************************************************
+
+10:44:17 ok: [localhost]
+
+10:44:17 
+
+10:44:17 TASK [Prepare : Removing Temporary GIT Directory] ******************************
+
+10:44:17 skipping: [localhost]
+
+10:44:17 
+
+10:44:17 TASK [Prepare : uri] ***********************************************************
+
+10:44:17 skipping: [localhost]
+
+10:44:17 
+
+10:44:17 TASK [Prepare : mail] **********************************************************
+
+10:44:17 skipping: [localhost]
+
+10:44:17 
+
+10:44:17 TASK [Prepare : debug] *********************************************************
+
+10:44:17 skipping: [localhost]
+
+10:44:17 
+
+10:44:17 TASK [Prepare : fail] **********************************************************
+
+10:44:19 skipping: [localhost]
+
+10:44:19 
+
+10:44:19 TASK [Assume role for portfolio] ***********************************************
+
+10:44:19 
+
+10:44:19 TASK [sts-assume-role : get AWS Key] *******************************************
+
+10:44:21 ok: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [sts-assume-role : Setting Up AWS Keys] ***********************************
+
+10:44:21 ok: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [Prepare : Setting Up Variables - Output Path] ****************************
+
+10:44:21 ok: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [Prepare : Validate nested cloudformation template] ***********************
+
+10:44:21 changed: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [Prepare : set nestedresult] **********************************************
+
+10:44:21 ok: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [Prepare : fail] **********************************************************
+
+10:44:21 skipping: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [Prepare : set template parameters] ***************************************
+
+10:44:21 skipping: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [Prepare : Run CFN-NAG validation on the Child Templates when nested for s3 resource type] ***
+
+10:44:21 skipping: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [Prepare : fail] **********************************************************
+
+10:44:21 skipping: [localhost]
+
+10:44:21 
+
+10:44:21 TASK [Prepare : Run CFN-NAG validation on the main Template for s3 resource type] ***
+
+10:44:32 changed: [localhost]
+
+10:44:32 
+
+10:44:32 TASK [Prepare : fail] **********************************************************
+
+10:44:32 skipping: [localhost]
+
+10:44:32 
+
+10:44:32 TASK [Prepare : Get AWS Account Name] ******************************************
+
+10:44:37 changed: [localhost]
+
+10:44:37 
+
+10:44:37 TASK [Prepare : set_fact] ******************************************************
+
+10:44:37 ok: [localhost]
+
+10:44:37 
+
+10:44:37 TASK [Prepare : debug] *********************************************************
+
+10:44:37 ok: [localhost] => {
+
+10:44:37     "AwsAccountName": "nts-ple"
+
+10:44:37 }
+
+10:44:37 
+
+10:44:37 TASK [Prepare : Run Cloud Rule Engine] *****************************************
+
+10:44:42 changed: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [Prepare : set_fact] ******************************************************
+
+10:44:42 ok: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [Prepare : Display Rule Engine Violations] ********************************
+
+10:44:42 ok: [localhost] => {}
+
+10:44:42 
+
+10:44:42 MSG:
+
+10:44:42 
+
+10:44:42 ['{"status": "SUCCESS", "rules": {}, "reason": "Rule Engine Validation SUCCESS"}']
+
+10:44:42 
+
+10:44:42 
+
+10:44:42 TASK [Prepare : fail] **********************************************************
+
+10:44:42 skipping: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [NestedS3 : Setting Up Variables - Nested S3] *****************************
+
+10:44:42 skipping: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [NestedS3 : assigning temp params] ****************************************
+
+10:44:42 skipping: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [NestedS3 : Copy nested templates] ****************************************
+
+10:44:42 skipping: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [NestedS3 : Uploading Nested templates to S3] *****************************
+
+10:44:42 skipping: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [LaunchCF : Get CFStack Facts] ********************************************
+
+10:44:42 ok: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [LaunchCF : set_fact] *****************************************************
+
+10:44:42 ok: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [LaunchCF : fail] *********************************************************
+
+10:44:42 skipping: [localhost]
+
+10:44:42 
+
+10:44:42 TASK [LaunchCF : Launch Cloudformation Stack] **********************************
+
+10:48:35 fatal: [localhost]: FAILED! => {
+
+10:48:35     "changed": true,
+
+10:48:35     "events": [
+
+10:48:35         "StackEvent AWS::CloudFormation::Stack VZ-NTS-JRDV-SQDB-PLE-BLUE-GREEN-STK20240801-0028 CREATE_FAILED",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR2 CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR1 CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR1 CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR4 CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR2 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR2 CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR1 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR3 CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR4 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR2 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR1 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR3 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR2 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTPS443LR1 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR2 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR4 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR3 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::ListenerRule ALBHTTP80LR1 CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTPS443L CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTP80L CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTPS443L CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTP80L CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTPS443L CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::Listener ALBHTTP80L CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::LoadBalancer ALB CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::AutoScaling::LaunchConfiguration GREENLC CREATE_FAILED",
+
+10:48:35         "StackEvent AWS::AutoScaling::LaunchConfiguration BLUELC CREATE_FAILED",
+
+10:48:35         "StackEvent AWS::SNS::Topic SNST CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTPS443TG CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTP80TG CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTPS443TG CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTP80TG CREATE_COMPLETE",
+
+10:48:35         "StackEvent AWS::SNS::Topic SNST CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::SNS::Topic SNST CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::LoadBalancer ALB CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTPS443TG CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTP80TG CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTP80TG CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTPS443TG CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::AutoScaling::LaunchConfiguration BLUELC CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTP80TG CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::LoadBalancer ALB CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTPS443TG CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::AutoScaling::LaunchConfiguration GREENLC CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup BLUEALBHTTPS443TG CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::SNS::Topic SNST CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::ElasticLoadBalancingV2::TargetGroup GREENALBHTTP80TG CREATE_IN_PROGRESS",
+
+10:48:35         "StackEvent AWS::CloudFormation::Stack VZ-NTS-JRDV-SQDB-PLE-BLUE-GREEN-STK20240801-0028 CREATE_IN_PROGRESS"
+
+10:48:35     ],
+
+10:48:35     "log": [
+
+10:48:35         "AWS::CloudFormation::Stack VZ-NTS-JRDV-SQDB-PLE-BLUE-GREEN-STK20240801-0028 CREATE_FAILED: The following resource(s) failed to create: [BLUELC, GREENLC]. ",
+
+10:48:35         "AWS::AutoScaling::LaunchConfiguration GREENLC CREATE_FAILED: Invalid IamInstanceProfile: VzPol-instance-ple-nts-ple-JRDV-JRDVec2role (Service: AutoScaling, Status Code: 400, Request ID: 5fecdb2c-cc72-40a0-ae0e-2c6c5302f860)",
+
+10:48:35         "AWS::AutoScaling::LaunchConfiguration BLUELC CREATE_FAILED: Invalid IamInstanceProfile: VzPol-instance-ple-nts-ple-JRDV-JRDVec2role (Service: AutoScaling, Status Code: 400, Request ID: 53ac508d-dc2e-4239-8b27-f2da2c103c44)"
+
+10:48:35     ],
+
+10:48:35     "output": "Stack CREATE failed",
+
+10:48:35     "stack_outputs": {},
+
+10:48:35     "stack_resources": [
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:25.610000+00:00",
+
+10:48:35             "logical_resource_id": "ALB",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:loadbalancer/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:27.574000+00:00",
+
+10:48:35             "logical_resource_id": "ALBHTTP80L",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::Listener",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:29.892000+00:00",
+
+10:48:35             "logical_resource_id": "ALBHTTP80LR1",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c/2873c8930297e844",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:29.789000+00:00",
+
+10:48:35             "logical_resource_id": "ALBHTTP80LR2",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c/e2f422712c9bfd1e",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:29.651000+00:00",
+
+10:48:35             "logical_resource_id": "ALBHTTP80LR3",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c/3514b6b2b069bec8",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:29.852000+00:00",
+
+10:48:35             "logical_resource_id": "ALBHTTP80LR4",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/385c4dd6b9b9bb1c/0a75acfc2568f991",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:27.814000+00:00",
+
+10:48:35             "logical_resource_id": "ALBHTTPS443L",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/87a164d1203fd1e6",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::Listener",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:30.040000+00:00",
+
+10:48:35             "logical_resource_id": "ALBHTTPS443LR1",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/87a164d1203fd1e6/6e8a57465e8e4d7a",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:30.170000+00:00",
+
+10:48:35             "logical_resource_id": "ALBHTTPS443LR2",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:listener-rule/app/JRDV-PLE-20240801-0028-ALB/8ee192c5df9f0765/87a164d1203fd1e6/71c8384b2c477155",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:45:05.162000+00:00",
+
+10:48:35             "logical_resource_id": "BLUEALBHTTP80TG",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:targetgroup/JRDV-PLE-20240801-0028-TG80B/8460a8dc8b14de61",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:45:05.176000+00:00",
+
+10:48:35             "logical_resource_id": "BLUEALBHTTPS443TG",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:targetgroup/JRDV-PLE-20240801-0028-TG443B/05d6cb3015e82cf6",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:03.971000+00:00",
+
+10:48:35             "logical_resource_id": "BLUELC",
+
+10:48:35             "physical_resource_id": "",
+
+10:48:35             "resource_type": "AWS::AutoScaling::LaunchConfiguration",
+
+10:48:35             "status": "CREATE_FAILED",
+
+10:48:35             "status_reason": "Invalid IamInstanceProfile: VzPol-instance-ple-nts-ple-JRDV-JRDVec2role (Service: AutoScaling, Status Code: 400, Request ID: 53ac508d-dc2e-4239-8b27-f2da2c103c44)"
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:45:05.116000+00:00",
+
+10:48:35             "logical_resource_id": "GREENALBHTTP80TG",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:targetgroup/JRDV-PLE-20240801-0028-TG80G/93d60d3c3f7be864",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:45:05.148000+00:00",
+
+10:48:35             "logical_resource_id": "GREENALBHTTPS443TG",
+
+10:48:35             "physical_resource_id": "arn:aws:elasticloadbalancing:us-east-1:443190586461:targetgroup/JRDV-PLE-20240801-0028-TG443G/4a0c88431f86e87a",
+
+10:48:35             "resource_type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:47:16.821000+00:00",
+
+10:48:35             "logical_resource_id": "GREENLC",
+
+10:48:35             "physical_resource_id": "",
+
+10:48:35             "resource_type": "AWS::AutoScaling::LaunchConfiguration",
+
+10:48:35             "status": "CREATE_FAILED",
+
+10:48:35             "status_reason": "Invalid IamInstanceProfile: VzPol-instance-ple-nts-ple-JRDV-JRDVec2role (Service: AutoScaling, Status Code: 400, Request ID: 5fecdb2c-cc72-40a0-ae0e-2c6c5302f860)"
+
+10:48:35         },
+
+10:48:35         {
+
+10:48:35             "last_updated_time": "2024-08-01T14:45:26.034000+00:00",
+
+10:48:35             "logical_resource_id": "SNST",
+
+10:48:35             "physical_resource_id": "arn:aws:sns:us-east-1:443190586461:VZ-NTS-JRDV-SQDB-PLE-BLUE-GREEN-STK20240801-0028-SNST-82h3a53BRfpm",
+
+10:48:35             "resource_type": "AWS::SNS::Topic",
+
+10:48:35             "status": "CREATE_COMPLETE",
+
+10:48:35             "status_reason": null
+
+10:48:35         }
+
+10:48:35     ]
+
+10:48:35 }
+
+10:48:35 
+
+10:48:35 PLAY RECAP *********************************************************************
+
+10:48:35 localhost                  : ok=26   changed=10   unreachable=0    failed=1    skipped=22   rescued=0    ignored=0   
+
+10:48:35 localhost                  : ok=26   changed=10   unreachable=0    failed=1    skipped=22   rescued=0    ignored=0   
+
+10:48:35 
+
+10:48:35 
+10:48:35 
+10:48:35 ****************** VZCloudAIO:1.2 AWSCloudFormation:CreateOrUpdate End ******************
+10:48:35 
+10:48:35 ERROR: AWSCloudFormation:CreateOrUpdate Failed
+10:48:35 Archiving artifacts
+10:48:35 Hygieia: Failed Publishing Build Complete Data. Response Code: 400. 
+10:48:35 Notifying upstream projects of job completion
+10:48:40 Finished: FAILURE
