@@ -1,244 +1,52 @@
-org.apache.maven.lifecycle.internal.DefaultExecutionEventCatapult.fire(DefaultExecutionEventCatapult.java:70)
-	at org.apache.maven.lifecycle.internal.builder.BuilderCommon.handleBuildError(BuilderCommon.java:144)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
-	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:260)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:172)
-	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:100)
-	at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:138)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
-	at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:179)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at hudson.maven.Maven3Builder.call(Maven3Builder.java:140)
-	at hudson.maven.Maven3Builder.call(Maven3Builder.java:71)
-	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
-	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
-	at hudson.remoting.Request$2.run(Request.java:377)
-	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:78)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-[WARNING] Attempt to (de-)serialize anonymous class org.jfrog.hudson.maven2.MavenDependenciesRecorder$1; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
-Notifying upstream projects of job completion
-Join notifier requires a CauseAction
-java.nio.file.NoSuchFileException: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/pom.xml
-	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
-	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:371)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:422)
-	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
-	at java.base/java.nio.file.Files.newInputStream(Files.java:156)
-	at hudson.Util.getDigestOf(Util.java:684)
-	at hudson.maven.reporters.MavenArtifactArchiver.postBuild(MavenArtifactArchiver.java:99)
-	at hudson.maven.Maven3Builder$MavenExecutionListener.sessionEnded(Maven3Builder.java:464)
-	at hudson.maven.Maven3Builder$JenkinsEventSpy.onEvent(Maven3Builder.java:281)
-	at org.apache.maven.eventspy.internal.EventSpyDispatcher.onEvent(EventSpyDispatcher.java:86)
-	at org.apache.maven.eventspy.internal.EventSpyExecutionListener.sessionEnded(EventSpyExecutionListener.java:54)
-	at org.apache.maven.lifecycle.internal.DefaultExecutionEventCatapult.fire(DefaultExecutionEventCatapult.java:57)
-	at org.apache.maven.lifecycle.internal.DefaultExecutionEventCatapult.fire(DefaultExecutionEventCatapult.java:38)
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:123)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:260)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:172)
-	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:100)
-	at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:138)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
-	at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:179)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at hudson.maven.Maven3Builder.call(Maven3Builder.java:140)
-	at hudson.maven.Maven3Builder.call(Maven3Builder.java:71)
-	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
-	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
-	at hudson.remoting.Request$2.run(Request.java:377)
-	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:78)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
+dev.ebiz.verizon.com/xsnc-parser/xsncparser/bonita/service/v2/3000002
+2024-07-24 07:05:04 INFO  NTLS.API.CommonFunctions:81 - Parser JSON: {
+"serviceId":3000002
+}
+2024-07-24 07:05:41 INFO  vz.driver.APIDriver:263 - Parser SUCCESS response: {
+  "status" : "Success",
+  "sncs" : [ ],
+  "hotCutFlag" : false,
+  "xsncIdList" : [ ],
+  "routes" : [ ]
+}
+2024-07-24 07:05:41 INFO  HBH.API.Ciena_NNI_INSTALL:160 - Validate the fields in XSNC parser
+2024-07-24 07:05:53 INFO  vz.driver.APIDriver:263 - XSNC_ID: 1139488 MANAGING_ENTITY:BNC BANDWIDTH: 10GBPS CONNECT_TYPE: UNICONF REQUEST_TYPE: ADD STATUS: NEW
+2024-07-24 07:05:53 INFO  NTLS.API.CommonFunctions:653 - XSNC Validation Successfull
+2024-07-24 07:06:04 INFO  vz.driver.APIDriver:263 - XSNC_ID: 1139276 MANAGING_ENTITY:CDG BANDWIDTH: 10GE CONNECT_TYPE: CUST_HAND_OFF REQUEST_TYPE: ADD STATUS: NEW
+2024-07-24 07:06:04 INFO  NTLS.API.CommonFunctions:653 - XSNC Validation Successfull
+No mail will be sent out, as 'NTS.NT4V.CUSTOMER-ACTIVATION.JOBS » NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API » verizonframework #335' does not have a result yet. Please make sure you set a proper result in case of pipeline/build scripts.
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[WARNING] Failed to notify spy hudson.maven.Maven3Builder$JenkinsEventSpy: java.util.concurrent.ExecutionException: Invalid object ID 6 iota=12
+[WARNING] Failed to notify spy hudson.maven.Maven3Builder$JenkinsEventSpy: java.util.concurrent.ExecutionException: Invalid object ID 6 iota=12
+[WARNING] Failed to notify spy hudson.maven.Maven3Builder$JenkinsEventSpy: java.util.concurrent.ExecutionException: Invalid object ID 6 iota=12
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  02:13 h
-[INFO] Finished at: 2024-07-31T20:15:13-04:00
+[INFO] Total time:  01:43 min
+[INFO] Finished at: 2024-07-24T07:06:10-04:00
 [INFO] ------------------------------------------------------------------------
-Waiting for Jenkins to finish collecting data
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-jar-plugin:3.3.0:jar (default-jar) on project verizonframework: Error assembling JAR: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/pom.xml isn't a file. -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project verizonframework: Execution default-test of goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test failed: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API && /usr/lib/jvm/java-11-openjdk-11.0.19.0.7-4.el8.x86_64/bin/java -jar /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/target/surefire/surefirebooter18238528163335111823.jar /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/target/surefire/surefire17406558879723244003tmp /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/target/surefire/surefire_016781559274474146606tmp
+[ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
-An attempt to send an e-mail to empty list of recipients, ignored.
-channel stopped
-[NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API] $ /usr/tmp/nts2/tools/hudson.plugins.sonar.SonarRunnerInstallation/Onesonarcloud-Scanner/bin/sonar-scanner -Dsonar.host.url=https://onesonarcloud.verizon.com ******** -Dsonar.projectKey=CUSTOMER-ACTIVATION -Dsonar.projectName=NTS-TCEV.CUSTOMER-ACTIVATION -Dsonar.sourceEncoding=UTF-8 -Dsonar.userHome=/usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/sonar_cache -Dsonar.projectBaseDir=/usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API -Dsonar.projectVersion=337 -Dsonar.sources=src -Dsonar.buildbreaker.skip=false
-INFO: Scanner configuration file: /var/tmp/nts2/tools/hudson.plugins.sonar.SonarRunnerInstallation/Onesonarcloud-Scanner/conf/sonar-scanner.properties
-INFO: Project root configuration file: NONE
-INFO: SonarScanner 4.7.0.2747
-INFO: Java 11.0.19 Red Hat, Inc. (64-bit)
-INFO: Linux 4.18.0-553.5.1.el8_10.x86_64 amd64
-INFO: User cache: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/sonar_cache/cache
-INFO: Scanner configuration file: /var/tmp/nts2/tools/hudson.plugins.sonar.SonarRunnerInstallation/Onesonarcloud-Scanner/conf/sonar-scanner.properties
-INFO: Project root configuration file: NONE
-INFO: Analyzing on SonarCloud
-INFO: Default locale: "en_US", source code encoding: "UTF-8"
-INFO: Load global settings
-INFO: Load global settings (done) | time=171ms
-INFO: Server id: E5B4BDAF-AXMqH8ooQ9pWqCaUna0x
-INFO: User cache: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/sonar_cache/cache
-INFO: Load/download plugins
-INFO: Load plugins index
-INFO: Load plugins index (done) | time=45ms
-INFO: Load/download plugins (done) | time=3837ms
-INFO: Loaded core extensions: developer-scanner
-INFO: Process project properties
-INFO: Process project properties (done) | time=7ms
-INFO: Execute project builders
-INFO: Execute project builders (done) | time=0ms
-INFO: Project key: CUSTOMER-ACTIVATION
-INFO: Base dir: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API
-INFO: Working dir: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork
-INFO: Load project settings for component key: 'CUSTOMER-ACTIVATION'
-INFO: Load project settings for component key: 'CUSTOMER-ACTIVATION' (done) | time=44ms
-INFO: Load project branches
-INFO: Load project branches (done) | time=29ms
-INFO: Load branch configuration
-INFO: Load branch configuration (done) | time=1ms
-INFO: Auto-configuring with CI 'Jenkins'
-INFO: Load quality profiles
-INFO: Load quality profiles (done) | time=89ms
-INFO: Load active rules
-INFO: Load active rules (done) | time=2060ms
-INFO: Load analysis cache
-INFO: Load analysis cache (404) | time=24ms
-INFO: Load project repositories
-INFO: Load project repositories (done) | time=30ms
-WARN: Property 'sonar.bpmn.file.suffixes' is not declared as multi-values/property set but was read using 'getStringArray' method. The SonarQube plugin declaring this property should be updated.
-INFO: Indexing files...
-INFO: Project configuration:
-INFO: 0 files indexed
-INFO: 0 files ignored because of scm ignore settings
-INFO: ------------- Run sensors on module NTS-TCEV.CUSTOMER-ACTIVATION
-INFO: Load metrics repository
-INFO: Load metrics repository (done) | time=29ms
-INFO: Sensor C# Project Type Information [csharp]
-INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
-INFO: Sensor C# Analysis Log [csharp]
-INFO: Sensor C# Analysis Log [csharp] (done) | time=8ms
-INFO: Sensor C# Properties [csharp]
-INFO: Sensor C# Properties [csharp] (done) | time=0ms
-INFO: Sensor TextAndSecretsSensor [text]
-INFO: Sensor TextAndSecretsSensor [text] (done) | time=5ms
-INFO: Sensor VB.NET Project Type Information [vbnet]
-INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=0ms
-INFO: Sensor VB.NET Analysis Log [vbnet]
-INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=8ms
-INFO: Sensor VB.NET Properties [vbnet]
-INFO: Sensor VB.NET Properties [vbnet] (done) | time=0ms
-INFO: Sensor JaCoCo XML Report Importer [jacoco]
-INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
-INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
-INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
-INFO: Sensor CSS Rules [javascript]
-INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
-INFO: Sensor CSS Rules [javascript] (done) | time=0ms
-INFO: Sensor ThymeLeaf template sensor [securityjavafrontend]
-INFO: javasecurity:S5131 is not activated in quality profile: skipping execution of thymeleaf sensor.
-INFO: Sensor ThymeLeaf template sensor [securityjavafrontend] (done) | time=0ms
-INFO: Sensor IaC Docker Sensor [iac]
-INFO: 0 source files to be analyzed
-INFO: 0/0 source files have been analyzed
-INFO: Sensor IaC Docker Sensor [iac] (done) | time=37ms
-INFO: Sensor Serverless configuration file sensor [security]
-INFO: 0 Serverless function entries were found in the project
-INFO: 0 Serverless function handlers were kept as entrypoints
-INFO: Sensor Serverless configuration file sensor [security] (done) | time=3ms
-INFO: Sensor AWS SAM template file sensor [security]
-INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
-INFO: Sensor AWS SAM Inline template file sensor [security]
-INFO: Sensor AWS SAM Inline template file sensor [security] (done) | time=0ms
-INFO: Sensor javabugs [dbd]
-INFO: Reading IR files from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ir/java
-INFO: No IR files have been included for analysis.
-INFO: Sensor javabugs [dbd] (done) | time=0ms
-INFO: Sensor pythonbugs [dbd]
-INFO: Reading IR files from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ir/python
-INFO: No IR files have been included for analysis.
-INFO: Sensor pythonbugs [dbd] (done) | time=1ms
-INFO: Sensor JavaSecuritySensor [security]
-INFO: No taint analysis rules have been enabled, will not execute taint analysis.
-INFO: Sensor JavaSecuritySensor [security] (done) | time=1ms
-INFO: Sensor CSharpSecuritySensor [security]
-INFO: Reading type hierarchy from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/ucfg_cs2
-INFO: Read 0 type definitions
-INFO: No UCFGs have been included for analysis.
-INFO: Sensor CSharpSecuritySensor [security] (done) | time=2ms
-INFO: Sensor PhpSecuritySensor [security]
-INFO: Reading type hierarchy from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ucfg2/php
-INFO: Read 0 type definitions
-INFO: No UCFGs have been included for analysis.
-INFO: Sensor PhpSecuritySensor [security] (done) | time=0ms
-INFO: Sensor PythonSecuritySensor [security]
-INFO: Reading type hierarchy from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ucfg2/python
-INFO: Read 0 type definitions
-INFO: No UCFGs have been included for analysis.
-INFO: Sensor PythonSecuritySensor [security] (done) | time=0ms
-INFO: Sensor JsSecuritySensor [security]
-INFO: Reading type hierarchy from: /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/.scannerwork/ucfg2/js
-INFO: Read 0 type definitions
-INFO: No UCFGs have been included for analysis.
-INFO: Sensor JsSecuritySensor [security] (done) | time=0ms
-INFO: ------------- Run sensors on project
-INFO: Sensor Analysis Warnings import [csharp]
-INFO: Sensor Analysis Warnings import [csharp] (done) | time=0ms
-INFO: Sensor Zero Coverage Sensor
-INFO: Sensor Zero Coverage Sensor (done) | time=0ms
-INFO: CPD Executor Calculating CPD for 0 files
-INFO: CPD Executor CPD calculation finished (done) | time=0ms
-INFO: Load New Code definition
-INFO: Load New Code definition (done) | time=26ms
-INFO: Analysis report generated in 73ms, dir size=198.3 kB
-INFO: Analysis report compressed in 9ms, zip size=27.2 kB
-INFO: Analysis report uploaded in 51ms
-INFO: ANALYSIS SUCCESSFUL, you can find the results at: https://onesonarcloud.verizon.com/dashboard?id=CUSTOMER-ACTIVATION
-INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
-INFO: More about the report processing at https://onesonarcloud.verizon.com/api/ce/task?id=AZELSpzp88wVuR9XyLDj
-INFO: Analysis total time: 4.996 s
-INFO: ------------------------------------------------------------------------
-INFO: EXECUTION SUCCESS
-INFO: ------------------------------------------------------------------------
-INFO: Total time: 11.017s
-INFO: Final Memory: 39M/256M
-INFO: ------------------------------------------------------------------------
-New run name is '#337'
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+New run name is '#335'
+Build was aborted
+Aborted by Rangrez, Imran
 [htmlpublisher] Archiving HTML reports...
 [htmlpublisher] Archiving at PROJECT level /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/ExtentReport to /apps/opt/jn-nts2-vd/jnhome/jobs/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/jobs/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/htmlreports/Custom_5fReport
+channel stopped
 [htmlpublisher] Archiving at PROJECT level /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/ExtentReport to /apps/opt/jn-nts2-vd/jnhome/jobs/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/jobs/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/htmlreports/FailureDetails_5fReport
 [htmlpublisher] Archiving at PROJECT level /usr/tmp/nts2/workspace/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/ExtentReport to /apps/opt/jn-nts2-vd/jnhome/jobs/NTS.NT4V.CUSTOMER-ACTIVATION.JOBS/jobs/NTS.TCEV.IEN.ART2.DEV.HBH-REG.CUSTOMER-ACTIVATION.API/htmlreports/Summary_5fReport
 [PostBuildScript] - [INFO] Executing post build scripts.
 Notifying upstream projects of job completion
-An attempt to send an e-mail to empty list of recipients, ignored.
-Email was triggered for: Always
-Sending email for trigger: Always
-Sending email to: imran.rangrez@verizon.com raju.mariappan@verizon.com maheshkumar.maheshwaram@verizon.com priyanka.sakthiganesh@verizon.com cheramahadevi.senthilvelan@verizon.com sathish.varukolu@verizon.com abinaya.thangaraj@verizon.com surya.murthi.sm@verizon.com ien-ntls-eline-activation-team@verizon.com
-Finished: FAILURE
+Extended Email Publisher is currently disabled in project settings
+Finished: ABORTED
