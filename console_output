@@ -1,5 +1,1 @@
-but as we said already, workspace getting deleted in between of build run
-so thats why at last we are seeing no such file or directpry error
-not only for pom whereas all other files, which require to build run
-such as roll.properties, mocktemplate.properties and many other
-hope m able to make you understand ?
+Hi @Imran Rangrez, I think this issue caused by high CPU utilization. Please check with your team for node space, CPU utilization and memory utilization.
