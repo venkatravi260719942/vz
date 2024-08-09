@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Checking dependencies
-if ! command -v curl &> /dev/null; then
-    yum install -y curl
-fi
+
 
 if ! command -v jq &> /dev/null; then
     yum install -y jq
